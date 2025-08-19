@@ -1,2 +1,9 @@
-# Programa-o-para-Dispositivos-M-veis-I
-Repositório destinado ao desenvolvimento de atividades da disciplina "Programação para Dispositivos Móveis I"
+# Programação para Dispositivos Móveis I
+
+Repositório destinado ao desenvolvimento das atividades da disciplina **Programação para Dispositivos Móveis I**.
+
+## Conteúdo
+
+- Exercícios
+- Projetos
+- Anotações de aula
