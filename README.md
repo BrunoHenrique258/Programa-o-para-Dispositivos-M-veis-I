@@ -10,7 +10,7 @@ Repositório destinado ao desenvolvimento das atividades da disciplina **Program
 
 NOTA: os demais pacotes deverão ser instalados para a execução dos exercícios propostos
 
-npm install react react-dom
-npm install react-native
-npx create-expo-app app --template expo-template-blank-typescript
-npm install expo-constants
+- npm install react react-dom
+- npm install react-native
+- npx create-expo-app app --template expo-template-blank-typescript
+- npm install expo-constants
