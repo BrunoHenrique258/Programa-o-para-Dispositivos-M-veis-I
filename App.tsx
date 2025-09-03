@@ -1,14 +1,7 @@
+// App.tsx
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import Um from './screens/Exercicio1';
+import Exercicio1 from './src/screens/exercicio11';
 
-const App: React.FC = () => {
-  return (
-    <>
-      <StatusBar hidden={true} />  {/* oculta a StatusBar */}
-      <Um />
-    </>
-  );
-};
-
-export default App;
+export default function App() {
+  return <Exercicio1 />;
+}
