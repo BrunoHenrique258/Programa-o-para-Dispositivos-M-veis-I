@@ -15,4 +15,4 @@ NOTA: os demais pacotes deverão ser instalados para a execução dos exercício
 - npx create-expo-app app --template expo-template-blank-typescript
 - npm install expo-constants
 - npm install @react-navigation/native-stack
-- 
+  
