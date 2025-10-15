@@ -1,12 +1,14 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, StatusBar } from 'react-native';
 import Constants from 'expo-constants';
 
-const Um: React.FC = () => {
+const Um = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.top}></View>
-      <View style={styles.bottom}></View>
+      <StatusBar hidden />
+
+      <View style={styles.topSection} />
+      <View style={styles.bottomSection} />
     </View>
   );
 };
@@ -16,15 +18,15 @@ export default Um;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',                // eixo vertical
-    paddingTop: Constants.statusBarHeight,  // evita sobreposição com a StatusBar
+    flexDirection: 'column',
+    paddingTop: Constants.statusBarHeight,
   },
-  top: {
-    flex: 0.5,                               // metade da tela
+  topSection: {
+    flex: 0.5,
     backgroundColor: 'crimson',
   },
-  bottom: {
-    flex: 0.5,                               // metade da tela
+  bottomSection: {
+    flex: 0.5,
     backgroundColor: 'salmon',
   },
 });

@@ -1,31 +1,34 @@
+// src/screens/exercicio4.tsx
 import React from 'react';
-import { View, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet, StatusBar, Image } from 'react-native';
 import Constants from 'expo-constants';
-import logo from '../assets/adaptive-icon.png'; 
 
-const Exercicio4: React.FC = () => {
+// importa o logo
+import logo from "../assets/adaptive-icon.png";
+
+const Exercicio4 = () => {
   return (
     <View style={styles.container}>
-      {/* Parte superior (crimson) dividida horizontalmente e verticalmente */}
-      <View style={styles.top}>
-        <View style={styles.left}>
-          <View style={styles.leftTop}></View>
-          <View style={styles.leftBottom}></View>
-        </View>
+      <StatusBar hidden />
 
-        <View style={styles.right}>
-          <View style={styles.rightTop}></View>
-          <View style={styles.rightBottom}></View>
+      {/* Parte superior dividida */}
+      <View style={styles.topContainer}>
+        <View style={styles.lime}>
+          <Image source={logo} style={styles.logo} resizeMode="contain" />
+        </View>
+        <View style={styles.rightContainer}>
+          <View style={styles.teal}>
+            <Image source={logo} style={styles.logo} resizeMode="contain" />
+          </View>
+          <View style={styles.skyblue}>
+            <Image source={logo} style={styles.logo} resizeMode="contain" />
+          </View>
         </View>
       </View>
 
-      {/* Parte inferior (salmon) */}
-      <View style={styles.bottom}>
-        <Image
-          source={logo}
-          style={styles.image}
-          resizeMode="contain"
-        />
+      {/* Parte inferior */}
+      <View style={styles.salmon}>
+        <Image source={logo} style={styles.logo} resizeMode="contain" />
       </View>
     </View>
   );
@@ -39,30 +42,41 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     paddingTop: Constants.statusBarHeight,
   },
-  top: {
+  topContainer: {
     flex: 0.5,
     flexDirection: 'row',
   },
-  left: {
+  lime: {
+    flex: 0.5,
+    backgroundColor: 'lime',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  rightContainer: {
     flex: 0.5,
     flexDirection: 'column',
   },
-  right: {
+  teal: {
     flex: 0.5,
-    flexDirection: 'column',
+    backgroundColor: 'teal',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  leftTop: { flex: 0.5, backgroundColor: 'lime' },
-  leftBottom: { flex: 0.5, backgroundColor: 'teal' },
-  rightTop: { flex: 0.5, backgroundColor: 'aquamarine' },
-  rightBottom: { flex: 0.5, backgroundColor: 'skyblue' },
-  bottom: {
+  skyblue: {
+    flex: 0.5,
+    backgroundColor: 'skyblue',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  salmon: {
     flex: 0.5,
     backgroundColor: 'salmon',
     justifyContent: 'center',
     alignItems: 'center',
   },
-  image: {
+  logo: {
     flex: 1,
-    alignSelf: 'center',
+    width: '100%',
+    height: '100%',
   },
 });

@@ -1,27 +1,24 @@
+// src/screens/exercicio3.tsx
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, StatusBar } from 'react-native';
 import Constants from 'expo-constants';
 
-const Exercicio3: React.FC = () => {
+const Exercicio3 = () => {
   return (
     <View style={styles.container}>
-      {/* Parte superior (crimson) dividida horizontalmente */}
-      <View style={styles.top}>
-        {/* Coluna esquerda */}
-        <View style={styles.left}>
-          <View style={styles.leftTop}></View>
-          <View style={styles.leftBottom}></View>
-        </View>
+      <StatusBar hidden />
 
-        {/* Coluna direita */}
-        <View style={styles.right}>
-          <View style={styles.rightTop}></View>
-          <View style={styles.rightBottom}></View>
+      {/* Parte superior dividida */}
+      <View style={styles.topContainer}>
+        <View style={styles.lime} />
+        <View style={styles.rightContainer}>
+          <View style={styles.teal} />
+          <View style={styles.skyblue} />
         </View>
       </View>
 
-      {/* Parte inferior (salmon) permanece igual */}
-      <View style={styles.bottom}></View>
+      {/* Parte inferior */}
+      <View style={styles.salmon} />
     </View>
   );
 };
@@ -34,36 +31,27 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     paddingTop: Constants.statusBarHeight,
   },
-  top: {
+  topContainer: {
     flex: 0.5,
-    flexDirection: 'row',  // eixo horizontal
-    backgroundColor: 'crimson',
+    flexDirection: 'row',
   },
-  left: {
-    flex: 0.5,
-    flexDirection: 'column', // divide verticalmente
-  },
-  right: {
-    flex: 0.5,
-    flexDirection: 'column', // divide verticalmente
-  },
-  leftTop: {
+  lime: {
     flex: 0.5,
     backgroundColor: 'lime',
   },
-  leftBottom: {
+  rightContainer: {
+    flex: 0.5,
+    flexDirection: 'column',
+  },
+  teal: {
     flex: 0.5,
     backgroundColor: 'teal',
   },
-  rightTop: {
-    flex: 0.5,
-    backgroundColor: 'aquamarine',
-  },
-  rightBottom: {
+  skyblue: {
     flex: 0.5,
     backgroundColor: 'skyblue',
   },
-  bottom: {
+  salmon: {
     flex: 0.5,
     backgroundColor: 'salmon',
   },

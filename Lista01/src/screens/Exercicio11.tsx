@@ -1,29 +1,32 @@
-import React from 'react';
-import {
-  View,
-  SafeAreaView,
-  Image,
-  TouchableOpacity,
-  Text,
-  StyleSheet,
-} from 'react-native';
+import React from "react";
+import { SafeAreaView, View, Text, TouchableOpacity, StyleSheet, Image, StatusBar } from "react-native";
 
-import fatecLogo from '../assets/fatec.png'; 
-
-const Exercicio11: React.FC = () => {
-  
-  const botoes = Array.from({ length: 10 }, (_, i) => i + 1);
-
+const Exercicio11 = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>Home</Text>
+      <StatusBar hidden />
 
-      <Image source={fatecLogo} style={styles.logo} resizeMode="contain" />
+      {/* Imagem Fatec */}
+      <Image
+        source={require("../assets/fatec.png")}
+        style={styles.logo}
+        resizeMode="contain"
+      />
 
+      {/* Título */}
+      <Text style={styles.title}>HOME</Text>
+
+      {/* Botões em duas colunas */}
       <View style={styles.buttonsContainer}>
-        {botoes.map((num) => (
-          <TouchableOpacity key={num} style={styles.button}>
-            <Text style={styles.buttonText}>{num}</Text>
+        {[
+          "Um", "Dois",
+          "Três", "Quatro",
+          "Cinco", "Seis",
+          "Sete", "Oito",
+          "Nove", "Dez"
+        ].map((label, index) => (
+          <TouchableOpacity key={index} style={styles.button}>
+            <Text style={styles.buttonText}>{label}</Text>
           </TouchableOpacity>
         ))}
       </View>
@@ -36,38 +39,38 @@ export default Exercicio11;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#222',
-    padding: 20,
-    alignItems: 'center',
-  },
-  title: {
-    color: 'white',
-    fontSize: 32,
-    fontWeight: 'bold',
-    marginBottom: 20,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#f0f0f0",
   },
   logo: {
     width: 140,
     height: 140,
-    marginBottom: 30,
+    marginBottom: 20,
+  },
+  title: {
+    fontSize: 32,
+    fontWeight: "bold",
+    marginBottom: 20,
   },
   buttonsContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap', 
-    justifyContent: 'center',
-    width: '100%',
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    width: "80%",
   },
   button: {
-    backgroundColor: '#007BFF',
-    paddingVertical: 15,
+    backgroundColor: "#f5b600",
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 6,
     margin: 5,
-    borderRadius: 5,
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexBasis: '45%', /* cada botão ocupa cerca de 45% da largura (2 colunas) */
+    width: "40%", // duas colunas
+    alignItems: "center",
   },
   buttonText: {
-    color: 'white',
-    fontSize: 20,
+    color: "#000",
+    fontWeight: "bold",
+    fontSize: 16,
   },
 });

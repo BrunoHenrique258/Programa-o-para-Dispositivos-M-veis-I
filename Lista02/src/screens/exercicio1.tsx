@@ -5,12 +5,12 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import Onze from "./src/screens/exercicio11";
-import Um from "./src/screens/exercicio1";
+import Onze from "./Lista02/src/screens/exercicio1";
+import Um from "./Lista01/src/screens/Exercicio1";
 
-import { RootStackParamList } from "./src/types";
+import { RootStackParamList } from "./types"; 
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator<RootStackParamList>(); 
 
 export default function App() {
   return (
@@ -21,7 +21,7 @@ export default function App() {
       </Stack.Navigator>
     </NavigationContainer>
   );
-} 
+}
 */
 
 import React from "react";
